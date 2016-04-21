@@ -1,0 +1,19 @@
+<div class="user-person" ng-controller="App.User.UserPerson.Controller">
+    <h5 class="header"><span>完善报名信息,享受一键报名(*为必填项)</span></h5>
+	<div class="list scroll-hack">
+		<div compile ng-bind-html="trustAsHtmlaaa(question)"></div>
+		<div class="element" ng-repeat="question in questions">
+			<label>{{question.label}}</label>
+			<div compile ng-bind-html="question.html"></div>
+		</div>
+	  <!-- <label class="item item-stacked-label" ng-repeat="element in person_sign_form">
+	    <span class="input-label">{{element.label}}</span>
+	    <div ng-bind-html="trustAsHtml(element)"></div>
+	  </label> -->
+	</div>
+    <div class="tabs">
+        <button class="button button-block button-positive" ng-click="postUserBaseInfo($event)" ng-disabled="sub_ing">确定</button>
+    </div>
+
+
+</div>

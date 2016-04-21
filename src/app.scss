@@ -1,0 +1,60 @@
+@import "loading/loading.scss";
+@import "header/header.scss";
+@import "footer/footer.scss";
+@import "main/main.scss";
+
+@import "game-list/game-list.scss";
+@import "game-detail/game-detail.scss";
+@import "process-detail/process-detail.scss";
+@import "enroll/enroll.scss";
+@import "game-package/game-package.scss";
+@import "event-declaration/event-declaration.scss";
+@import "game-person/game-person.scss";
+@import "game-person-sign-detail/game-person-sign-detail.scss";
+
+@import "user/user.scss";
+@import "user-me/user-me.scss";
+@import "user-action/user-action.scss";
+@import "user-enroll/user-enroll.scss";
+@import "user-integration/user-integration.scss";
+@import "user-person/user-person.scss";
+@import "user-safe/user-safe.scss";
+@import "user-bind-phone/user-bind-phone.scss";
+@import "user-bind-email/user-bind-email.scss";
+@import "user-buy/user-buy.scss";
+
+html, body{
+	height: 100%;
+	width: 100%;
+}
+
+.button:after{
+
+	top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.button-block{
+	border-radius: 0;
+}
+
+.ion-chevron-right{
+	color: #d0d0d0;
+	font-size: 16px !important;
+}
+
+.tabs-icon-left.tabs .tab-item, .tabs-icon-left > .tabs .tab-item, .tabs-icon-right.tabs .tab-item, .tabs-icon-right > .tabs .tab-item{
+	font-size: 16px;
+	opacity: 1;
+}
+
+.btnStartUpload{
+    background-color: #ff7a11 !important;
+    font-size: 14px !important;
+    margin-left: 10px !important;
+    min-height: 40px !important;
+    margin-top: 10px !important;
+    line-height: inherit !important;
+}

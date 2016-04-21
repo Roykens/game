@@ -1,0 +1,76 @@
+<div class="list scroll-hack" ng-controller="App.GameList.List.Controller">
+    <a class="item item-thumbnail-left" ng-repeat="game in game_list" ui-sref="game-detail({game_id:game.id})">
+      <img ng-src="{{game.avatar}}" style="height: auto;">
+      <h2>{{game.name}}</h2>
+      <p>{{game.simple}}</p>
+      <button class="button button-small button-assertive" ng-click="goEnroll($event, game.id)">
+      一键报名
+      </button>
+      <button class="button button-small button-assertive" ng-click="focusMatch($event, game.id)" ng-show="game.focus_show">
+      关注赛事
+      </button>
+    </a>
+    <!-- <a class="item item-thumbnail-left" ui-sref="game-detail({game_id:1})">
+      <img src="img/1.png">
+      <h2>北京马拉松赛跑</h2>
+      <p>啊实打实的</p>
+      <button class="button button-small button-assertive">
+    一键报名
+    </button>
+    </a>
+    <a class="item item-thumbnail-left" ui-sref="game-detail({game_id:1})">
+      <img src="img/1.png">
+      <h2>Pretty Hate Machine</h2>
+      <p>Nine Inch Nails</p>
+      <button class="button button-small button-assertive">
+    一键报名
+    </button>
+    </a>
+    <a class="item item-thumbnail-left" href="#">
+      <img src="img/1.png">
+      <h2>Pretty Hate Machine</h2>
+      <p>Nine Inch Nails</p>
+      <button class="button button-small button-assertive">
+    一键报名
+    </button>
+    </a>
+    <a class="item item-thumbnail-left" href="">
+      <img src="img/1.png">
+      <h2>Pretty Hate Machine</h2>
+      <p>Nine Inch Nails</p>
+      <button class="button button-small button-assertive">
+    一键报名
+    </button>
+    </a>
+    </a>
+    <a class="item item-thumbnail-left" href="#">
+      <img src="img/1.png">
+      <h2>Pretty Hate Machine</h2>
+      <p>Nine Inch Nails</p>
+      <button class="button button-small button-assertive">
+    一键报名
+    </button>
+    </a>
+    <a class="item item-thumbnail-left" href="#">
+      <img src="img/1.png">
+      <h2>Pretty Hate Machine</h2>
+      <p>Nine Inch Nails</p>
+      <button class="button button-small button-assertive">
+    一键报名
+    </button>
+    </a><a class="item item-thumbnail-left" href="#">
+      <img src="img/1.png">
+      <h2>Pretty Hate Machine</h2>
+      <p>Nine Inch Nails</p>
+      <button class="button button-small button-assertive">
+    一键报名
+    </button>
+    </a><a class="item item-thumbnail-left" href="#">
+      <img src="img/1.png">
+      <h2>Pretty Hate Machine</h2>
+      <p>Nine Inch Nails</p>
+      <button class="button button-small button-assertive">
+    一键报名
+    </button>
+    </a> -->
+</div>

@@ -1,0 +1,84 @@
+.user-buy {
+    .border-bottom {
+        border-bottom: 1px solid #E0E0E0;
+    }
+    .text-dark {
+        color: #666;
+    }
+    .text-gray {
+        color: #999;
+    }
+    .bar-header {
+        background: #ff7a11;
+        .title {
+            color: #fff;
+        }
+    }
+    .slider-box {
+        .box {
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .title-info {
+        p {
+            margin: 0;
+            height: 24px;
+            line-height: 24px;
+        }
+        .price {
+            font-size: 16px;
+        }
+    }
+    .buttons {
+        .button-outline {
+            border-color: #CCC;
+            background: #fff;
+            color: #999;
+            border-radius: 2px;
+        }
+        .button-outline.active{
+        	color: #fff;
+        	border-color: #ff7a11 !important;
+            background: #ff7a11 !important;
+        }
+    }
+    .buttons.buy-buttons{
+    	.col{
+    		padding-top: 0;
+    		padding-right:0;
+    		padding-bottom:0;
+    	}
+    	.button.button-outline.text-orange{
+    		color: #FF7A10 !important;
+    		border-color: #FF7A10 !important;
+    	}
+    }
+    .select-tabs {
+        .row {
+            .col-33 {
+                .active {
+                    color: #FF7A10;
+                    border-bottom: 2px solid #FF7A10;
+                }
+            }
+        }
+    }
+    .footer {
+        .tab-item {
+            max-width: 50%;
+            width: 50%;
+        }
+        .game-tab {
+            border-right: 1px solid #fff;
+        }
+        .tabs {
+            background-color: #ff7a11;
+            color: #fff;
+            .icon::before {
+                font-size: 20px;
+            }
+        }
+    }
+}

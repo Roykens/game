@@ -1,0 +1,29 @@
+<div class="game-person-sign-detail" ng-controller="App.GamePersonSignDetail.Controller">
+    
+	<div class="list scroll-hack">
+		<h5 class="header"><span>报名信息</span><a href="" ng-click="goGamePerson()">返回修改报名信息</a></h5>
+		<p>姓名：{{getOrderConfirm.name}}</p>
+		<p>性别：{{getOrderConfirm.sex}}</p>
+		<p>出生日期：{{getOrderConfirm.birthday}}</p>
+		<p>证件类型：{{getOrderConfirm.id_type}}</p>
+		<p>证件号码：{{getOrderConfirm.id_number}}</p>
+		<p>血型：{{getOrderConfirm.blood}}</p>
+		<p>邮箱：{{getOrderConfirm.sign_email}}</p>
+		<p>手机号码：{{getOrderConfirm.cellphone}}</p>
+		<p>紧急联系人：{{getOrderConfirm.urgency_name}}</p>
+		<p>紧急联系人手机：{{getOrderConfirm.urgency_cellphone}}</p>
+		<p>民族：{{getOrderConfirm.nation}}</p>
+		<p>国家或地区：{{getOrderConfirm.nationality}}</p>
+        <p ng-show="getOrderConfirm.province !== ''">省份：{{getOrderConfirm.province}}</p>
+        <p ng-show="getOrderConfirm.city !== ''">城市：{{getOrderConfirm.city}}</p>
+		<p>通讯地址：{{getOrderConfirm.address}}</p>
+		<p>邮政编码：{{getOrderConfirm.zipcode}}</p>
+		<p>衣服尺寸：{{getOrderConfirm.cloth_size}}</p>
+		<p ng-show="getOrderConfirm.product_name !== ''">套餐名称：{{getOrderConfirm.product_name}}</p>
+	</div>
+	<div class="price">总费用：<span>{{getOrderConfirm.total_fee}} 元</span></div>
+    <div class="tabs">
+        <button class="button button-block button-positive" id="btnPay"
+                ng-disabled="pay_ing" ng-click="postOrderConfirm()">确认支付</button>
+    </div>
+</div>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html ng-app="ionicApp">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+	<title>赛事报名</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+    <!-- build:css css/bms-lib.css -->
+    <link rel="stylesheet" type="text/css" href="../bower_components/ionic/release/css/ionic.css">
+    <!-- endbuild -->
+
+    <link rel="stylesheet" type="text/css" href="webuploader/webuploader.css">
+
+	<!-- build:css css/bms.css -->
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<!-- endbuild -->
+</head>
+<body ng-controller="App.Loading.Controller">
+    <!-- loading div -->
+    <!-- <div class="" ng-include="'loading/loading.html'"></div> -->
+	
+	<!-- header div -->
+    <!-- <div class="header" ng-include="'header/header.html'"></div> -->
+
+    <!-- router div -->
+    <ion-nav-view cache-view="false"></ion-nav-view>
+    <!-- <div ng-class="slide" class="router-div" ui-view ></div> -->
+
+
+	<!-- footer div -->
+    <!-- <div class="footer" ng-include="'footer/footer.html'"></div> -->
+  	
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+	<!-- build:js js/bms-lib.js -->
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="../bower_components/ionic/release/js/ionic.bundle.js"></script>
+    <script type="text/javascript" src="../bower_components/angular-resource/angular-resource.js"></script>
+	<script type="text/javascript" src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbuild -->
+	<!-- build:js js/bms.js -->
+
+    <!-- uploader -->
+    <script type="text/javascript" src="webuploader/webuploader.min.js"></script>
+	<!-- config -->
+	<script type="text/javascript" src="config/config.js"></script>
+
+	<!-- loading -->
+	<script type="text/javascript" src="loading/loading.js"></script>
+
+	<!-- utils -->
+	<script type="text/javascript" src="utils/utils.js"></script>
+	<script type="text/javascript" src="utils/scrollHack.js"></script>
+	
+	<!-- Modules -->
+	<script type="text/javascript" src="models/models.js"></script>
+	<script type="text/javascript" src="models/user.js"></script>
+	<script type="text/javascript" src="models/game.js"></script>
+	<script type="text/javascript" src="models/event.js"></script>
+	<script type="text/javascript" src="models/product.js"></script>
+	<script type="text/javascript" src="models/core.js"></script>
+
+	<!-- header -->
+	<script type="text/javascript" src="header/header.js"></script>
+
+	<!-- game -->
+	<script type="text/javascript" src="game-list/list/list.js"></script>
+	<script type="text/javascript" src="game-list/game-list.js"></script>
+	<script type="text/javascript" src="enroll/enroll.js"></script>
+	<script type="text/javascript" src="game-detail/game-detail.js"></script>
+	<script type="text/javascript" src="process-detail/process-detail.js"></script>
+	<script type="text/javascript" src="event-declaration/event-declaration.js"></script>
+	<script type="text/javascript" src="game-person/game-person.js"></script>
+	<script type="text/javascript" src="game-package/game-package.js"></script>
+	<script type="text/javascript" src="game-person-sign-detail/game-person-sign-detail.js"></script>
+
+	<!-- user -->
+	<script type="text/javascript" src="user-bind-email/user-bind-email.js"></script>
+	<script type="text/javascript" src="user-bind-phone/user-bind-phone.js"></script>
+	<script type="text/javascript" src="user-safe/user-safe.js"></script>
+	<script type="text/javascript" src="user-integration/user-integration.js"></script>
+	<script type="text/javascript" src="user-enroll/user-enroll.js"></script>
+	<script type="text/javascript" src="user-action/user-action.js"></script>
+	<script type="text/javascript" src="user-me/user-me.js"></script>
+    <script type="text/javascript" src="user-person/user-person.js"></script>
+    <script type="text/javascript" src="user-buy/user-buy.js"></script>
+	<script type="text/javascript" src="user/user.js"></script>
+
+	<!-- footer -->
+	<script type="text/javascript" src="footer/footer.js"></script>
+
+	<script type="text/javascript" src="app.js"></script>
+
+	<script type="text/javascript" src="utils/myDirective.js"></script>
+
+
+	<!-- endbuild -->
+    <input type="hidden" name="productId" id="productId" value="">
+</body>
+</html>

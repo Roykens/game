@@ -1,0 +1,37 @@
+<div class="user-me" ng-controller="App.User.Me.Controller">
+    <div class="list me">
+	    <a class="item item-avatar item-icon-right" href="#">
+	      <img ng-src="{{user.avatar}}">
+	      <p>芝麻号：{{user.sesame_num}}</p>
+	    </a>
+
+	</div>
+
+	<div class="list">
+	  <label class="item item-input">
+	    <span class="input-label">昵称：</span>
+	    <input type="text" ng-model="user.nick_name">
+	  </label>
+	  <label class="item item-input">
+	    <span class="input-label">真实姓名：</span>
+	    <input type="text" ng-model="user.name">
+	  </label>
+	  <label class="item item-input">
+	    <span class="input-label">所在地：</span>
+	    <input type="text" ng-model="user.location">
+	  </label>
+	  <label class="item item-input">
+	    <span class="input-label">签名：</span>
+	    <input type="text" ng-model="user.note">
+	  </label>
+	</div>
+
+	<div class="footer">
+    	<div class="tabs tabs-icon-left">
+		  <a class="user-tab tab-item" ng-click="editUserProfile(user)">
+		    提交
+		  </a>
+		</div>
+    </div>
+
+</div>

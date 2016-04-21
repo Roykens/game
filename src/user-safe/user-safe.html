@@ -1,0 +1,40 @@
+<div class="user-safe" ng-controller="App.User.Safe.Controller">
+    <style type="text/css">
+        .red-point {
+            display: block;
+            background: #f00;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            top: 0;
+            right: 0;
+            left: 5px;
+            position: absolute;
+        }
+    </style>
+    <div class="list enroll-list">
+        <a class="item item-icon-left item-icon-right"
+           ui-sref="user-bind-phone()">
+            <i class="icon ion-iphone" style="color: #d59de1"></i>
+            手机绑定
+            <span style="position:relative;" ng-show="user.cellphone == ''">
+              <i class="red-point"></i>
+            </span>
+            <i class="icon ion-chevron-right"></i>
+        </a>
+    </div>
+
+    <div class="footer">
+        <div class="tabs tabs-icon-left">
+            <a class="enroll-tab tab-item" ui-sref="game-list()">
+                <i class="icon ion-ios-list"></i>
+                赛事报名
+            </a>
+            <a class="user-tab tab-item" ui-sref="user()">
+                <i class="icon ion-person"></i>
+                个人中心
+            </a>
+        </div>
+    </div>
+
+</div>

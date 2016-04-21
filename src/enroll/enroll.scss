@@ -1,0 +1,48 @@
+.enroll {
+	.header{
+		border-bottom: 1px solid #b2b2b2;
+		text-align: center;
+		font-size: 16px;
+		line-height: 50px;
+    	height: 70px;
+	}
+	
+	.data{
+		text-align: center;
+		margin-top: 0;
+		border-bottom: 1px solid #b2b2b2;
+		.col{
+			line-height: 47px;
+		}
+		.button-small{
+			margin-top: 10px;
+            background-color: #ff7a11;
+            color: #fff;
+            border-radius: 0;
+            width: 75px;
+        }
+	}
+
+	.tuanti{
+		margin-top: 10px;
+		padding-left: 10px;
+		a{
+			color: #ff7a11;
+		}
+	}
+	.header .col {
+    	
+	}
+
+	.col {
+	    
+	}
+
+	.col:last-child {
+	    
+	}
+
+	.row:last-child .col {
+	    
+	}    
+}

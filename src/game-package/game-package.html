@@ -1,0 +1,19 @@
+<div class="game-package" ng-controller="App.GamePackage.Controller">
+    <ion-content scroll="true" direction="y" overflow-scroll="false">
+        <div class="row header">
+          <div class="col">选择</div>
+          <div class="col">套餐</div>
+          <div class="col">价格</div>
+        </div>
+        <div class="row data" ng-repeat="product in product_list" ng-click="changeDetail(product)">
+          <div class="col"><ion-checkbox ng-click="changeCheckbox(product, $event)" ng-model="product.checkbox"></ion-checkbox></div>
+          <div class="col">{{product.name}}</div>
+          <div class="col">{{product.fee}}</div>
+          <div style="display: inline-block;clear: both;height:1px;"></div>
+          <div class="product-detail" ng-show="product.show" compile ng-bind-html="trustAsHtmlaaa(product)"></div>
+        </div>
+    </ion-content>
+    <div class="tabs">
+      <button class="button button-block button-positive" ng-click="postPersonSignProduct()">下一步</button>
+    </div>
+</div>

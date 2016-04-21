@@ -1,0 +1,46 @@
+<div class="user-enroll" ng-controller="App.User.Enroll.Controller">
+    <h4 class="title"><i class="icon ion-ios-paper-outline"
+                         style="color: #688ae2"></i>我的报名</h4>
+
+    <div class="list enroll-list scroll-hack">
+        <a class="item item-thumbnail-left" ng-repeat="sign in person_sign">
+            <img ng-src="{{ sign.game_avatar }}">
+
+            <h2>{{ sign.game_name }}</h2>
+
+            <p>{{ sign.event_name }} 费用:￥{{ sign.total_fee }}</p>
+
+            <p>报名时间:{{ sign.created_at }}</p>
+            <button class="button button-small button-stable"
+                    ng-show="sign.payment_status == -1">
+                订单已过期
+            </button>
+            <button class="button button-small button-assertive"
+                    ng-click="goPay($event, sign.id)"
+                    ng-show="sign.payment_status == 0">
+                去支付
+            </button>
+            <button class="button button-small button-balanced"
+                    ng-show="sign.payment_status == 1">
+                已支付
+            </button>
+            <button class="button button-small button-stable"
+                    ng-show="sign.payment_status == 2">
+                暂不能支付({{ sign.payment_status_text }})
+            </button>
+        </a>
+    </div>
+    <div class="footer">
+        <div class="tabs tabs-icon-left">
+            <a class="enroll-tab tab-item" ui-sref="game-list()">
+                <i class="icon ion-ios-list"></i>
+                赛事报名
+            </a>
+            <a class="user-tab tab-item" ui-sref="user()">
+                <i class="icon ion-person"></i>
+                个人中心
+            </a>
+        </div>
+    </div>
+
+</div>

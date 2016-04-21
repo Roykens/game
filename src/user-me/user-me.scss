@@ -1,0 +1,58 @@
+.user-me {
+
+	.list{
+		margin-bottom: 0px;
+	}
+
+    .item-avatar > img:first-child{
+    	max-width: 70px;
+    	max-height: 70px;
+    }
+
+    a.item.item-avatar{
+    	padding-left: 110px;
+    	min-height: 110px;
+    }
+
+    .me{
+    	.item-avatar{
+    		border-top-width: 15px;
+    		border-bottom-width: 15px;
+            img{
+                top: 6px;
+            }
+    	}
+
+        .button{
+            margin-top: 10px;
+            width: 100px;
+            background-color: #ff7a11;
+        }
+    	
+    	p{
+    		padding-top: 10px;
+    	}
+    }
+
+    .enroll-list{
+    	border-top: 15px solid #ddd;
+    	border-bottom: 15px solid #ddd;
+    }
+
+    .footer{
+        .tab-item{
+            max-width: 100%;
+            width: 100%;
+            font-size: 20px;
+        }
+        
+        .tabs{
+           background-color: #ff7a11;
+           color: #fff; 
+        }
+        a{
+            font-size: 20px;
+        }
+    }
+
+}

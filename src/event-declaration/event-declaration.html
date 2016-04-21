@@ -1,0 +1,11 @@
+<div class="event-declaration" ng-controller="App.EventDeclaration.Controller">
+    <h5 class="header"><span>{{event_declaration.title}}</span></h5>
+	<div class="contents scroll-hack" ng-bind-html="trustAsHtml(event_declaration.contents)">
+		
+	</div>
+	<ion-checkbox ng-model="checkbox">我已经阅读和理解以上声明及协议</ion-checkbox>
+    <div class="tabs">
+        <button class="button button-block button-positive" ng-disabled="!checkbox" ng-click="goGamePerson(event_declaration.id)">下一步</button>
+    </div>
+
+</div>

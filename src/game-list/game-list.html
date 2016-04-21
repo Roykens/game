@@ -1,0 +1,30 @@
+<div class="game-list" ng-controller="App.GameList.Controller">
+    <div class="search">
+        <label class="item item-input item-select">
+            <select ng-model="month" ng-change="searchGameList()">
+                <option selected value="">日期全部</option>
+                <option ng-repeat="month in month_list" value="{{month.key}}">{{month.value}}</option>
+            </select>
+        </label>
+        <label class="item item-input item-select">
+            <select ng-model="city" ng-change="searchGameList()">
+                <option selected value="">地区全部</option>
+                <option ng-repeat="city in data_city" value="{{city.id}}">{{city.value}}</option>
+            </select>
+        </label>
+    </div>
+    <div ng-include="'game-list/list/list.html'"></div>
+    <div class="footer">
+        <div class="tabs tabs-icon-left">
+            <a class="game-tab tab-item" ui-sref="game-list()">
+                <i class="icon ion-ios-list-outline"></i> 赛事报名
+            </a>
+            <a class="game-tab tab-item" ui-sref="user-buy()">
+                <i class="icon ion-ios-cart-outline"></i> 芯片购买
+            </a>
+            <a class="user-tab tab-item" ui-sref="user()">
+                <i class="icon ion-ios-person-outline"></i> 个人中心
+            </a>
+        </div>
+    </div>
+</div>
