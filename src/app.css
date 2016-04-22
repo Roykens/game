@@ -810,7 +810,7 @@
 
 .user-buy .title-info p {
   margin: 0;
-  height: 24px;
+  min-height: 24px;
   line-height: 24px; }
 
 .user-buy .title-info .price {

@@ -3,21 +3,31 @@
         <div class="buttons">
             <button class="button button-clear button-light icon ion-ios-arrow-left" on-touch="back()"></button>
         </div>
-        <h1 class="title">{{chip.name}}</h1>
+        <h1 class="title">芯片</h1>
     </ion-header-bar>
     <ion-content class="has-tabs">
         <ion-slide-box on-slide-changed="slideHasChanged($index)" class="slider-box border-bottom">
-            <ion-slide ng-repeat="img in chip.chipimage_se">
+            <ion-slide>
                 <div class="box">
-                    <img ng-src="img.image" >
+                    <img src="img/banner-1.png" alt="">
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box">
+                    <img src="img/banner-1.png" alt="">
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box">
+                    <img src="img/banner-1.png" alt="">
                 </div>
             </ion-slide>
         </ion-slide-box>
         <div class="padding border-bottom title-info">
             <p class="price assertive">{{ 399 | currency:"￥"}}</p>
             <p class="desc">
-                <span class="text-dark">{{chip.name}}</span>
-                <span class="text-gray">{{chip.intro}}</span>
+                <span class="text-dark">VIP芯片</span>
+                <span class="text-gray">芯片介绍</span>
             </p>
         </div>
         <div class="padding border-bottom">
@@ -35,25 +45,22 @@
                     </div>
                 </div>
                 <div class="col-80">
-                    <div class="padding-left text-gray" ng-bind-html="chip.description"></div>
+                    <div class="padding-left text-gray">
+                        详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍
+                    </div>
                 </div>
             </div>
         </div>
         <div class="select-tabs border-bottom">
             <div class="row text-center text-gray">
                 <div class="col-33">
-                    <div class="padding" ng-class="{active: activeTab==1}" on-touch="setTabs(1)">套餐介绍
-                    </div>
+                    <div class="padding" ng-class="{active: activeTab==1}" on-touch="setTabs(1)">套餐说明</div>
                 </div>
                 <div class="col-33">
-                    <div class="padding" ng-class="{active: activeTab==2}" on-touch="setTabs(2)" >
-                        使用说明
-                    </div>
+                    <div class="padding" ng-class="{active: activeTab==2}" on-touch="setTabs(2)">使用说明</div>
                 </div>
                 <div class="col-33">
-                    <div class="padding" ng-class="{active: activeTab==3}" on-touch="setTabs(3)">
-                        规格参数
-                    </div>
+                    <div class="padding" ng-class="{active: activeTab==3}" on-touch="setTabs(3)">规格参数</div>
                 </div>
             </div>
             <div class="select-contents">
@@ -80,10 +87,14 @@
                     </div>
                 </div>
                 <div class="sel-cont" ng-show="activeTab==2">
-                    <div class="padding text-dark" ng-bind-html="chip.introduce"></div>
+                    <div class="padding text-dark">
+                        使用说明详细说明详细说明详细说明详细说明详细说明详细说明
+                    </div>
                 </div>
                 <div class="sel-cont" ng-show="activeTab==3">
-                    <div class="padding text-dark"  ng-bind-html="chip.standard"></div>
+                    <div class="padding text-dark">
+                        规格参数详细说明详细说明详细说明详细说明详细说明详细说明详细说明详细说明详细说明详细说明详细说明详细说明详细说明详细说明详细说明详细说明详细说明详细说明
+                    </div>
                 </div>
             </div>
         </div>

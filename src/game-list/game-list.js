@@ -13,10 +13,11 @@ angular.module('App.GameList', ['App.GameList.List']).controller('App.GameList.C
         Core,
         Game
     ) {
-        $scope.$state = $state
-        $scope.month = ''
-        $scope.city = ''
-        $scope.img_list = []
+        $scope.$state = $state;
+        $scope.month = '';
+        $scope.city = '';
+        $scope.img_list = [];
+        $scope.buy_id = 1;;
 
         $scope.month_list = [
             {

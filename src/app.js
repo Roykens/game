@@ -159,7 +159,7 @@ appModule.config([
                 templateUrl: 'user-bind-email/user-bind-email.html'
             })
             .state('user-buy', {
-                url: '/user-buy',
+                url: '/user-buy/:id',
                 templateUrl: 'user-buy/user-buy.html'
             });
             
