@@ -9,7 +9,7 @@
         <ion-slide-box on-slide-changed="slideHasChanged($index)" class="slider-box border-bottom">
             <ion-slide ng-repeat="img in chip.chipimage_se">
                 <div class="box">
-                    <img ng-src="img.image" >
+                    <img ng-src="img.image">
                 </div>
             </ion-slide>
         </ion-slide-box>
@@ -21,10 +21,27 @@
             </p>
         </div>
         <div class="padding border-bottom">
-            <p class="text-dark">套餐</p>
-            <div class="buttons">
-                <button class="button button-small button-outline padding-left padding-right" ng-class="{active:choseType==1}" on-touch="selectType(1)">套餐一</button>
-                <button class="button button-small button-outline padding-left padding-right" ng-class="{active: choseType==2}" on-touch="selectType(2)">套餐二</button>
+            <div class="row padding-bottom">
+                <div class="col-20">
+                    <p class="text-dark params-select">套餐</p>
+                </div>
+                <div class="col-80">
+                    <div class="buttons">
+                        <button class="button button-small button-outline padding-left padding-right" ng-class="{active: choseType==1}" on-touch="selectType(1)" ng-repeat="combos in combos_list">{{combos.name}}</button><!-- 
+                        <button class="button button-small button-outline padding-left padding-right" ng-class="{active: choseType==2}" on-touch="selectType(2)">套餐二</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-20">
+                    <p class="text-dark params-select">颜色</p>
+                </div>
+                <div class="col-80">
+                    <div class="buttons">
+                        <button class="button button-small button-outline padding-left padding-right" ng-class="{active:choseColor==1}" on-touch="selectColor(1)">白色</button>
+                        <button class="button button-small button-outline padding-left padding-right" ng-class="{active: choseColor==2}" on-touch="selectColor(2)">红色</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="padding border-bottom">
@@ -46,7 +63,7 @@
                     </div>
                 </div>
                 <div class="col-33">
-                    <div class="padding" ng-class="{active: activeTab==2}" on-touch="setTabs(2)" >
+                    <div class="padding" ng-class="{active: activeTab==2}" on-touch="setTabs(2)">
                         使用说明
                     </div>
                 </div>
@@ -83,7 +100,7 @@
                     <div class="padding text-dark" ng-bind-html="chip.introduce"></div>
                 </div>
                 <div class="sel-cont" ng-show="activeTab==3">
-                    <div class="padding text-dark"  ng-bind-html="chip.standard"></div>
+                    <div class="padding text-dark" ng-bind-html="chip.standard"></div>
                 </div>
             </div>
         </div>
