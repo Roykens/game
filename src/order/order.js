@@ -4,6 +4,7 @@ angular.module('App.Order', ['App.Order.Pay']).controller('App.Order.Controller'
     '$ionicHistory',
     "$ionicPopup",
     'Chips',
+    'Order',
     'Coupon',
     function(
         $scope,
@@ -11,6 +12,7 @@ angular.module('App.Order', ['App.Order.Pay']).controller('App.Order.Controller'
         $ionicHistory,
         $ionicPopup,
         Chips,
+        Order,
         Coupon
     ) {
         $scope.back = function() { $ionicHistory.goBack(); }
@@ -100,7 +102,7 @@ angular.module('App.Order', ['App.Order.Pay']).controller('App.Order.Controller'
         // 下订单
         $scope.placeOrder = function() {
             if (checkInfo()) { //表单验证通过
-                Chips.placeOrder({
+                Order.placeOrder({
                     "chip": $scope.p_chip,
                     "color": $scope.p_color,
                     "combo": $scope.p_combo,
