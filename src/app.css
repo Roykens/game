@@ -883,6 +883,9 @@
 .order .list .item input {
   font-weight: 700; }
 
+.order .list .item .coupon_text {
+  font-size: 14px; }
+
 .order .buttons-box {
   position: fixed;
   bottom: 0;
@@ -901,7 +904,34 @@
       border-left: 1px solid #FF9B4D;
       background: #AAA; }
 
-html, body {
+.order-pay .bar-header {
+  background: #ff7a11; }
+  .order-pay .bar-header .title {
+    color: #fff; }
+
+.order-pay .list .item input {
+  font-weight: 700; }
+
+.order-pay .buttons-box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%; }
+  .order-pay .buttons-box .row {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0; }
+    .order-pay .buttons-box .row .button {
+      margin: 0;
+      background: #FF7A11;
+      color: #FFF; }
+    .order-pay .buttons-box .row .button.back {
+      border-left: 1px solid #FF9B4D;
+      background: #AAA; }
+
+html,
+body {
   height: 100%;
   width: 100%; }
 
@@ -918,7 +948,10 @@ html, body {
   color: #d0d0d0;
   font-size: 16px !important; }
 
-.tabs-icon-left.tabs .tab-item, .tabs-icon-left > .tabs .tab-item, .tabs-icon-right.tabs .tab-item, .tabs-icon-right > .tabs .tab-item {
+.tabs-icon-left.tabs .tab-item,
+.tabs-icon-left > .tabs .tab-item,
+.tabs-icon-right.tabs .tab-item,
+.tabs-icon-right > .tabs .tab-item {
   font-size: 16px;
   opacity: 1; }
 
@@ -929,3 +962,6 @@ html, body {
   min-height: 40px !important;
   margin-top: 10px !important;
   line-height: inherit !important; }
+
+.popup .popup-buttons .button.button-positive {
+  background: #FF7A11; }

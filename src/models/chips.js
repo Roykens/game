@@ -12,11 +12,10 @@ angular.module('App.Models').factory('Chips', [
                 isArray: true
             },
             placeOrder: {
-                method: "get",
+                method: "post",
                 params: {
                     event: 'order'
-                },
-                isArray: true
+                }
             }
         })
     }

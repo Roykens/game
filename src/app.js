@@ -164,8 +164,12 @@ appModule.config([
                 templateUrl: 'user-buy/user-buy.html'
             })
             .state('order', {
-                url: '/order/:id/:color/:combo/:buy_type',
+                url: '/order/:id/:color/:combo/:buy_type/:name',
                 templateUrl: 'order/order.html'
+            })
+            .state('order-pay', {
+                url: '/order-pay/:id/:detail/:price/:trade_no',
+                templateUrl: 'order-pay/order-pay.html'
             });
             
             // .state('links.linkRecord', {

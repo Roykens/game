@@ -97,7 +97,7 @@ angular.module('App.User.Buy', []).controller('App.User.Buy.Controller', [
 
         // 购买
         $scope.buy = function(buy_type) {
-            $state.go('order', { id: $scope.chip.id, color: $scope.choseColor, combo: $scope.choseType, buy_type: buy_type });
+            $state.go('order', { id: $scope.chip.id, name: $scope.chip.name, color: $scope.choseColor, combo: $scope.choseType, buy_type: buy_type });
         }
     }
 ]);

@@ -1,0 +1,25 @@
+<div class="order-pay" ng-controller="App.Order.Pay.Controller">
+    <ion-header-bar align-title="center" class="bar-header">
+        <div class="buttons">
+            <button class="button button-clear button-light icon ion-ios-arrow-left" on-touch="back()"></button>
+        </div>
+        <h1 class="title">确认支付</h1>
+    </ion-header-bar>
+    <ion-content class="has-footer">
+        <div class="padding">
+            <div class="row">
+                <div class="col-25">支付项目:</div>
+                <div class="col-75">{{pay.detail}}</div>
+            </div>
+            <div class="row">
+                <div class="col-25">支付费用:</div>
+                <div class="col-75">{{pay.price | currency:"￥"}}</div>
+            </div>
+        </div>
+    </ion-content>
+    <div class="buttons-box">
+        <div class="row">
+            <button class="button button-block" on-touch="comfirmPay()">确认支付</button>
+        </div>
+    </div>
+</div>

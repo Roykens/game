@@ -3,7 +3,7 @@
         <div class="buttons">
             <button class="button button-clear button-light icon ion-ios-arrow-left" on-touch="back()"></button>
         </div>
-        <h1 class="title">购买VIP芯片</h1>
+        <h1 class="title">购买{{chip_name}}</h1>
     </ion-header-bar>
     <ion-content class="has-footer">
         <div class="list">
@@ -20,6 +20,10 @@
                 <input type="text" readonly ng-model="order.price">
             </label>
             <label class="item item-input item-stacked-label">
+                <span class="input-label">优惠券 <span class="coupon_text assertive">{{coupon_text}}</span></span>
+                <input type="tel" placeholder="有优惠券是，请输入优惠券码" ng-model="order.coupon" ng-focus="coupon_input()" ng-blur="checkCoupon()">
+            </label>
+            <label class="item item-input item-stacked-label">
                 <span class="input-label">收货人姓名 <strong class="assertive">*</strong></span>
                 <input type="text" placeholder="请输入收货人姓名" ng-model="order.receive_name">
             </label>
@@ -28,8 +32,8 @@
                 <input type="text" placeholder="请输入收货人地址" ng-model="order.receive_address">
             </label>
             <label class="item item-input item-stacked-label">
-                <span class="input-label">收货人电话 <strong class="assertive">*</strong></span>
-                <input type="tel" placeholder="请输入收货人电话" ng-model="order.receive_cellphone">
+                <span class="input-label">收货人手机号码 <strong class="assertive">*</strong></span>
+                <input type="tel" placeholder="请输入收货人手机号码" ng-model="order.receive_cellphone">
             </label>
             <label class="item item-input item-stacked-label">
                 <span class="input-label">芯片使用人姓名 <strong class="assertive">*</strong></span>
@@ -42,10 +46,6 @@
             <label class="item item-input item-stacked-label">
                 <span class="input-label">芯片使用人手机号码 <strong class="assertive">*</strong></span>
                 <input type="tel" placeholder="请务必填写真实手机号" ng-model="order.user_cellphone">
-            </label>
-            <label class="item item-input item-stacked-label">
-                <span class="input-label">优惠券</span>
-                <input type="tel" placeholder="有优惠券是，请输入优惠券码"  ng-model="order.coupon">
             </label>
         </div>
     </ion-content>
