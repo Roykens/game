@@ -31,7 +31,8 @@ var appModule = angular.module('ionicApp', [
     'App.GamePerson',
     'App.GamePackage',
     'App.GamePersonSignDetail',
-    'App.User'
+    'App.User',
+    'App.Order'
 ]);
 
 
@@ -161,6 +162,10 @@ appModule.config([
             .state('user-buy', {
                 url: '/user-buy/:id',
                 templateUrl: 'user-buy/user-buy.html'
+            })
+            .state('order', {
+                url: '/order/:id/:color/:combo/:buy_type',
+                templateUrl: 'order/order.html'
             });
             
             // .state('links.linkRecord', {

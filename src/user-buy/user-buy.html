@@ -5,7 +5,7 @@
         </div>
         <h1 class="title">{{chip.name}}</h1>
     </ion-header-bar>
-    <ion-content class="has-tabs">
+    <ion-content class="has-tabs content-box">
         <ion-slide-box on-slide-changed="slideHasChanged($index)" class="slider-box border-bottom">
             <ion-slide ng-repeat="img in chip.chipimage_se">
                 <div class="box">
@@ -14,35 +14,42 @@
             </ion-slide>
         </ion-slide-box>
         <div class="padding border-bottom title-info">
-            <p class="price assertive">{{ 399 | currency:"￥"}}</p>
+            <p class="price assertive"><strong>{{ prices[price_field] | currency:"￥"}}</strong></p>
             <p class="desc">
                 <span class="text-dark">{{chip.name}}</span>
                 <span class="text-gray">{{chip.intro}}</span>
             </p>
         </div>
-        <div class="padding border-bottom">
+        <div class="padding-top padding-left padding-bottom border-bottom">
             <div class="row padding-bottom">
-                <div class="col-20">
-                    <p class="text-dark params-select">套餐</p>
-                </div>
-                <div class="col-80">
-                    <div class="buttons">
-                        <button class="button button-small button-outline padding-left padding-right" ng-class="{active: choseType==1}" on-touch="selectType(1)" ng-repeat="combos in combos_list">{{combos.name}}</button><!-- 
-                        <button class="button button-small button-outline padding-left padding-right" ng-class="{active: choseType==2}" on-touch="selectType(2)">套餐二</button> -->
-                    </div>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-20">
                     <p class="text-dark params-select">颜色</p>
                 </div>
                 <div class="col-80">
                     <div class="buttons">
-                        <button class="button button-small button-outline padding-left padding-right" ng-class="{active:choseColor==1}" on-touch="selectColor(1)">白色</button>
-                        <button class="button button-small button-outline padding-left padding-right" ng-class="{active: choseColor==2}" on-touch="selectColor(2)">红色</button>
+                        <!-- <button class="button button-small button-outline padding-left padding-right" ng-class="{active:choseColor==1}" on-touch="selectColor(1)">白色</button>
+                        <button class="button button-small button-outline padding-left padding-right" ng-class="{active: choseColor==2}" on-touch="selectColor(2)">红色</button> -->
+                        <button class="button button-small button-outline padding-left padding-right" ng-class="{active: choseColor==color.id}" on-touch="selectColor(color.id)" ng-repeat="color in colors_list">{{color.name}}
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-20">
+                    <p class="text-dark params-select">套餐</p>
+                </div>
+                <div class="col-80">
+                    <div class="buttons">
+                        <button class="button button-small button-outline padding-left padding-right" ng-class="{active: choseType==combos.id}" on-touch="selectType(combos.id)" ng-repeat="combos in combos_list">{{combos.name}}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-100">
+                    <p class="validity params-select">芯片有效期 <strong>{{chip.validity}}</strong> 年</p>
+                </div>
+            </div>
+
+            
         </div>
         <div class="padding border-bottom">
             <div class="row">
@@ -75,24 +82,12 @@
             </div>
             <div class="select-contents">
                 <div class="sel-cont" ng-show="activeTab==1">
-                    <div class="row">
-                        <dic class="col-20">
-                            <div class="text-dark padding">套餐一</div>
+                    <div class="row" ng-repeat="combos in combos_list">
+                        <dic class="col-25">
+                            <div class="text-dark padding">{{combos.name}}</div>
                         </dic>
-                        <div class="col-80">
-                            <div class="padding-top text-gray">
-                                套餐一详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <dic class="col-20">
-                            <div class="text-dark padding">套餐二</div>
-                        </dic>
-                        <div class="col-80">
-                            <div class="padding-top text-gray">
-                                套餐二详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍
-                            </div>
+                        <div class="col-75">
+                            <div class="padding-top text-gray">{{combos.content}} </div>
                         </div>
                     </div>
                 </div>
@@ -104,17 +99,17 @@
                 </div>
             </div>
         </div>
-        <div class="border-bottom">
-            <div class="row buttons buy-buttons">
-                <div class="col-33">
-                    <button class="button button-block button-outline text-orange">芯片管理</button>
-                </div>
-                <div class="col  padding-left">
-                    <button class="button button-block button-outline active">帮别人买</button>
-                </div>
+    </ion-content>
+    <div class="border-bottom buttons-box">
+        <div class="row buttons buy-buttons">
+            <div class="col-33">
+                <button class="button button-small button-block button-outline text-orange" on-touch="buy(1)">自己买</button>
+            </div>
+            <div class="col  padding-left">
+                <button class="button button-small button-block button-outline active" on-touch="buy(2)">帮别人买</button>
             </div>
         </div>
-    </ion-content>
+    </div>
     <div class="footer">
         <div class="tabs tabs-icon-left">
             <a class="game-tab tab-item" ui-sref="game-list()">

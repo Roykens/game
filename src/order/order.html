@@ -1,0 +1,62 @@
+<div class="order" ng-controller="App.Order.Controller">
+    <ion-header-bar align-title="center" class="bar-header">
+        <div class="buttons">
+            <button class="button button-clear button-light icon ion-ios-arrow-left" on-touch="back()"></button>
+        </div>
+        <h1 class="title">购买VIP芯片</h1>
+    </ion-header-bar>
+    <ion-content class="has-footer">
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">选购颜色</span>
+                <input type="text" readonly ng-model="order.color">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">选购套餐</span>
+                <input type="text" readonly ng-model="order.combo">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">芯片费用</span>
+                <input type="text" readonly ng-model="order.price">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">收货人姓名 <strong class="assertive">*</strong></span>
+                <input type="text" placeholder="请输入收货人姓名" ng-model="order.receive_name">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">收货人地址 <strong class="assertive">*</strong></span>
+                <input type="text" placeholder="请输入收货人地址" ng-model="order.receive_address">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">收货人电话 <strong class="assertive">*</strong></span>
+                <input type="tel" placeholder="请输入收货人电话" ng-model="order.receive_cellphone">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">芯片使用人姓名 <strong class="assertive">*</strong></span>
+                <input type="tel" placeholder="请务必填写真实姓名" ng-model="order.user_name">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">芯片使用人身份证 <strong class="assertive">*</strong></span>
+                <input type="tel" placeholder="请务必填写真实身份证号" ng-model="order.user_identity">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">芯片使用人手机号码 <strong class="assertive">*</strong></span>
+                <input type="tel" placeholder="请务必填写真实手机号" ng-model="order.user_cellphone">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">优惠券</span>
+                <input type="tel" placeholder="有优惠券是，请输入优惠券码"  ng-model="order.coupon">
+            </label>
+        </div>
+    </ion-content>
+    <div class="buttons-box">
+        <div class="row">
+            <div class="col-50">
+                <button class="button button-block" on-touch="placeOrder()">提交订单</button>
+            </div>
+            <div class="col-50">
+                <button class="button button-block back" on-touch="back()">返回</button>
+            </div>
+        </div>
+    </div>
+</div>

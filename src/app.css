@@ -825,7 +825,8 @@
   background: #fff;
   color: #999;
   border-radius: 2px;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  margin-right: 5px; }
 
 .user-buy .buttons .button-outline.active {
   color: #fff;
@@ -841,9 +842,22 @@
   color: #FF7A10 !important;
   border-color: #FF7A10 !important; }
 
+.user-buy .validity {
+  line-height: 38px; }
+
 .user-buy .select-tabs .row .col-33 .active {
   color: #FF7A10;
   border-bottom: 2px solid #FF7A10; }
+
+.user-buy .buttons-box {
+  position: fixed;
+  left: 0;
+  bottom: 46px;
+  width: 100%; }
+  .user-buy .buttons-box .button.button-block.button-small {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 15px; }
 
 .user-buy .footer .tab-item {
   max-width: 50%;
@@ -857,6 +871,35 @@
   color: #fff; }
   .user-buy .footer .tabs .icon::before {
     font-size: 20px; }
+
+.user-buy .content-box {
+  margin-bottom: 55px; }
+
+.order .bar-header {
+  background: #ff7a11; }
+  .order .bar-header .title {
+    color: #fff; }
+
+.order .list .item input {
+  font-weight: 700; }
+
+.order .buttons-box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%; }
+  .order .buttons-box .row {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0; }
+    .order .buttons-box .row .button {
+      margin: 0;
+      background: #FF7A11;
+      color: #FFF; }
+    .order .buttons-box .row .button.back {
+      border-left: 1px solid #FF9B4D;
+      background: #AAA; }
 
 html, body {
   height: 100%;

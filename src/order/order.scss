@@ -1,0 +1,36 @@
+.order {
+    .bar-header {
+        background: #ff7a11;
+        .title {
+            color: #fff;
+        }
+    }
+    .list {
+        .item {
+            input {
+                font-weight: 700;
+            }
+        }
+    }
+    .buttons-box {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+        .row {
+            padding: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            .button {
+                margin: 0;
+                background: #FF7A11;
+                color: #FFF;
+            }
+            .button.back {
+                border-left: 1px solid #FF9B4D;
+                background: #AAA;
+            }
+        }
+    }
+}

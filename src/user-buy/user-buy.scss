@@ -31,7 +31,7 @@
             font-size: 16px;
         }
     }
-    .params-select{
+    .params-select {
         margin: 0;
         line-height: 34px;
     }
@@ -42,24 +42,26 @@
             color: #999;
             border-radius: 2px;
             margin-bottom: 5px;
+            margin-right: 5px;
         }
-        .button-outline.active{
-        	color: #fff;
-        	border-color: #ff7a11 !important;
+        .button-outline.active {
+            color: #fff;
+            border-color: #ff7a11 !important;
             background: #ff7a11 !important;
         }
     }
-    .buttons.buy-buttons{
-    	.col{
-    		padding-top: 0;
-    		padding-right:0;
-    		padding-bottom:0;
-    	}
-    	.button.button-outline.text-orange{
-    		color: #FF7A10 !important;
-    		border-color: #FF7A10 !important;
-    	}
+    .buttons.buy-buttons {
+        .col {
+            padding-top: 0;
+            padding-right: 0;
+            padding-bottom: 0;
+        }
+        .button.button-outline.text-orange {
+            color: #FF7A10 !important;
+            border-color: #FF7A10 !important;
+        }
     }
+    .validity{ line-height: 38px;}
     .select-tabs {
         .row {
             .col-33 {
@@ -68,6 +70,17 @@
                     border-bottom: 2px solid #FF7A10;
                 }
             }
+        }
+    }
+    .buttons-box{
+        position: fixed;
+        left: 0;
+        bottom: 46px;
+        width: 100%;
+        .button.button-block.button-small{
+            padding-top:5px;
+            padding-bottom:5px;
+            font-size:15px;
         }
     }
     .footer {
@@ -85,5 +98,8 @@
                 font-size: 20px;
             }
         }
+    }
+    .content-box{
+        margin-bottom: 55px;
     }
 }
